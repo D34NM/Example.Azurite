@@ -10,4 +10,12 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.2.0" />
+    <PackageReference Include="System.IO.Abstractions" Version="7.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Examples.Core\Examples.Core.csproj" />
+  </ItemGroup>
 </Project>
