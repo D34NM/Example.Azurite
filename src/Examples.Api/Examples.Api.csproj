@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,10 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="Properties\launchSettings.json" />
-    <Content Remove="appsettings.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Examples.Core\Examples.Core.csproj">

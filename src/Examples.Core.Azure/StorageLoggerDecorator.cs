@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Examples.Core.Azure
 {
-    public class StorageLoggerDecorator : IStorage
+    internal sealed class StorageLoggerDecorator : IStorage
     {
         private readonly ILogger<StorageLoggerDecorator> _logger;
         private readonly IStorage _decorated;

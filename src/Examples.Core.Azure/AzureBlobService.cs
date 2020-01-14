@@ -14,7 +14,6 @@ namespace Examples.Core.Azure
         private readonly BlobContainerClient _blobContainerClient;
         private readonly IFileSystem _fileSystem;
 
-
         public AzureBlobService(BlobContainerClient blobContainerClient, IFileSystem fileSystem)
         {
             _blobContainerClient = blobContainerClient;
@@ -23,7 +22,7 @@ namespace Examples.Core.Azure
 
         public async Task SaveAsync(File file, CancellationToken cancellationToken)
         {
-            using var fileStream = _fileSystem.File.OpenRead(file);
+            var fileStream = _fileSystem.File.OpenRead(file);
             await _blobContainerClient.UploadBlobAsync(_fileSystem.Path.GetFileName(file), fileStream, cancellationToken);
         }
 

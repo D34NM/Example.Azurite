@@ -20,27 +20,27 @@ namespace Examples.Azurite.Tests
         [Fact]
         public async Task Run()
         {
-            var fileContent = await _fileSystem.File.ReadAllBytesAsync("Resources\test_file_one.txrt");
+            var fileContent = await _fileSystem.File.ReadAllBytesAsync(_fileSystem.Path.Combine("Resources", "test_file_one.txt"));
 
             using var client = new HttpClient();
-            var content = await CreateForm(fileContent);
+            var content = CreateForm(fileContent);
+            await client.PostAsync(new Uri("http://localhost:5000/api/example"), content);
         }
 
-        private async Task<MultipartFormDataContent> CreateForm(byte[] fileContent)
+        private MultipartFormDataContent CreateForm(byte[] fileContent)
         {
-            await using var memory = new MemoryStream(fileContent);
+            var memory = new MemoryStream(fileContent);
             var streamContent = new StreamContent(memory);
             streamContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
             {
                 Name = "test_file_one",
                 FileName = "test_file_one.txt"
             };
-            using var content = new MultipartFormDataContent
+
+            return new MultipartFormDataContent
             {
                 { streamContent,"test_file_one.txt" }
             };
-
-            return content;
         }
     }
 }

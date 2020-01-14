@@ -1,0 +1,34 @@
+version: '3.7'
+
+services: 
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    hostname: azurite
+    command: "azurite-blob --blobHost 0.0.0.0 --loose"
+    ports: 
+      - "10000:10000"
+    volumes: 
+      - ./tests/bin/azurite:/data
+    networks: 
+      - skynet
+  
+  api:
+    container_name: api
+    image: api
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - "5000:5000"
+      - "5001:5001"
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Test
+      - ASPNETCORE_URLS=http://+:5000
+    depends_on: 
+      - azurite
+    restart: on-failure
+    networks: 
+      - skynet
+
+networks: 
+  skynet:

@@ -1,3 +1,4 @@
+using System.IO.Abstractions;
 using Examples.Core.Azure.Extensions;
 using Examples.Core.Azure.Options;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +24,7 @@ namespace Examples.Api
             Configuration.Bind("Storage", options);
 
             services
+                .AddSingleton<IFileSystem, FileSystem>()
                 .AddBlobServiceClient(options)
                 .AddControllers();
         }
