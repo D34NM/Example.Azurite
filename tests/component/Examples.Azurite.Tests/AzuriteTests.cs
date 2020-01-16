@@ -23,8 +23,8 @@ namespace Examples.Azurite.Tests
             var fileContent = await _fileSystem.File.ReadAllBytesAsync(_fileSystem.Path.Combine("Resources", "test_file_one.txt"));
 
             using var client = new HttpClient();
-            var content = CreateForm(fileContent);
-            await client.PostAsync(new Uri("http://localhost:5000/api/example"), content);
+            using var content = CreateForm(fileContent);
+            await client.PostAsync(new Uri("http://127.0.0.1:5000/api/example"), content);
         }
 
         private MultipartFormDataContent CreateForm(byte[] fileContent)
@@ -39,7 +39,7 @@ namespace Examples.Azurite.Tests
 
             return new MultipartFormDataContent
             {
-                { streamContent,"test_file_one.txt" }
+                { streamContent, "test_file_one.txt" }
             };
         }
     }

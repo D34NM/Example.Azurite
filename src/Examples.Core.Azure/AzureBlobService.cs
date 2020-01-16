@@ -22,8 +22,8 @@ namespace Examples.Core.Azure
 
         public async Task SaveAsync(File file, CancellationToken cancellationToken)
         {
-            var fileStream = _fileSystem.File.OpenRead(file);
-            await _blobContainerClient.UploadBlobAsync(_fileSystem.Path.GetFileName(file), fileStream, cancellationToken);
+            var blob = _blobContainerClient.GetBlobClient(_fileSystem.Path.GetFileName(file));
+            await blob.UploadAsync(file, cancellationToken);
         }
 
         public async Task SaveAsync(IReadOnlyCollection<File> files, CancellationToken cancellationToken)

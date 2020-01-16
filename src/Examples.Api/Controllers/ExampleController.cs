@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Abstractions;
 using System.Threading;
@@ -26,9 +27,9 @@ namespace Examples.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromForm] IEnumerable<IFormFile> files, CancellationToken cancellationToken)
+        public async Task<IActionResult> PostAsync(CancellationToken cancellationToken)
         {
-            var mapped = await Map(files, cancellationToken);
+            var mapped = await Map(Request.Form.Files, cancellationToken); // todo: parameter binding, had some issues with [FromForm]
 
             await _storage.SaveAsync(mapped, cancellationToken);
 
@@ -47,7 +48,7 @@ namespace Examples.Api.Controllers
             {
                 var filePath = _fileSystem.Path.Combine(tmpDirectory, file.FileName);
 
-                await using var stream = new FileStream(filePath, FileMode.Create);
+                using var stream = new FileStream(filePath, FileMode.Create);
                 await file.CopyToAsync(stream, cancellationToken);
 
                 mapped.Add(new File(filePath));
