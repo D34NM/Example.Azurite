@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -16,6 +15,12 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\test_file_one.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\test_file_one.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\test_file_one.txt">
