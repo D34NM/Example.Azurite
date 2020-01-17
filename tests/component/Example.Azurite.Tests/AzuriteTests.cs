@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Examples.Azurite.Tests
+namespace Example.Azurite.Tests
 {
     public class AzuriteTests
     {

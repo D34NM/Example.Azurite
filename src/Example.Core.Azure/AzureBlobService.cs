@@ -3,11 +3,11 @@ using System.IO.Abstractions;
 using System.Threading;
 using System.Threading.Tasks;
 using Azure.Storage.Blobs;
-using Examples.Core.Contracts;
-using Examples.Core.Models;
+using Example.Core.Contracts;
+using Example.Core.Models;
 using System.Linq;
 
-namespace Examples.Core.Azure
+namespace Example.Core.Azure
 {
     internal sealed class AzureBlobService : IStorage
     {

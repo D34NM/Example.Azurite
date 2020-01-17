@@ -1,13 +1,13 @@
 using System.IO.Abstractions;
-using Examples.Core.Azure.Extensions;
-using Examples.Core.Azure.Options;
+using Example.Core.Azure.Extensions;
+using Example.Core.Azure.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Examples.Api
+namespace Example.Api
 {
     public class Startup
     {

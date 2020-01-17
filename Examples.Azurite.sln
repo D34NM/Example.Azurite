@@ -5,17 +5,17 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0FAB022-BDEB-4974-9B27-33C15E5C45CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Api", "src\Examples.Api\Examples.Api.csproj", "{7DDB03CE-5F0F-4EC3-8704-86C9271AB1B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Api", "src\Example.Api\Example.Api.csproj", "{7DDB03CE-5F0F-4EC3-8704-86C9271AB1B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Core", "src\Examples.Core\Examples.Core.csproj", "{4C5EB44B-4374-4959-9AFE-E7B4856E4352}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Core", "src\Example.Core\Example.Core.csproj", "{4C5EB44B-4374-4959-9AFE-E7B4856E4352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Core.Azure", "src\Examples.Core.Azure\Examples.Core.Azure.csproj", "{6458214B-F926-4979-8E40-55423A51251A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Core.Azure", "src\Example.Core.Azure\Example.Core.Azure.csproj", "{6458214B-F926-4979-8E40-55423A51251A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8D934199-21F2-4E85-8FD0-5EC9AB575D4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "component", "component", "{9D3CA972-59EF-49CF-8B6B-3033EB3367EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Azurite.Tests", "tests\component\Examples.Azurite.Tests\Examples.Azurite.Tests.csproj", "{F822E65E-F6CF-4CE3-949E-6EB4DB961877}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Azurite.Tests", "tests\component\Example.Azurite.Tests\Example.Azurite.Tests.csproj", "{F822E65E-F6CF-4CE3-949E-6EB4DB961877}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Examples.Core.Models;
+using Example.Core.Models;
 
-namespace Examples.Core.Contracts
+namespace Example.Core.Contracts
 {
     public interface IStorage
     {

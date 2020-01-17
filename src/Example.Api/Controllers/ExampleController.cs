@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.IO.Abstractions;
 using System.Threading;
 using System.Threading.Tasks;
-using Examples.Core.Contracts;
+using Example.Core.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using File = Examples.Core.Models.File;
+using File = Example.Core.Models.File;
 
-namespace Examples.Api.Controllers
+namespace Example.Api.Controllers
 {
     [ApiController]
     [Route("api/example")]

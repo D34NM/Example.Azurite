@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Examples.Core.Azure.Options
+namespace Example.Core.Azure.Options
 {
     public class BlobServiceOptions
     {

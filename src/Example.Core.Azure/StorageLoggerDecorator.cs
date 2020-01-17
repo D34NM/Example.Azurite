@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Examples.Core.Contracts;
-using Examples.Core.Models;
+using Example.Core.Contracts;
+using Example.Core.Models;
 using Microsoft.Extensions.Logging;
 
-namespace Examples.Core.Azure
+namespace Example.Core.Azure
 {
     internal sealed class StorageLoggerDecorator : IStorage
     {

@@ -11,10 +11,10 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Examples.Core\Examples.Core.csproj">
+    <ProjectReference Include="..\Example.Core\Example.Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Examples.Core.Azure\Examples.Core.Azure.csproj">
+    <ProjectReference Include="..\Example.Core.Azure\Example.Core.Azure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

@@ -1,11 +1,11 @@
 using System.IO.Abstractions;
 using Azure.Storage.Blobs;
-using Examples.Core.Azure.Options;
-using Examples.Core.Contracts;
+using Example.Core.Azure.Options;
+using Example.Core.Contracts;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Examples.Core.Azure.Extensions
+namespace Example.Core.Azure.Extensions
 {
     public static class ServiceCollectionExtensions
     {

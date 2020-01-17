@@ -1,4 +1,4 @@
-namespace Examples.Core.Models
+namespace Example.Core.Models
 {
     public sealed class File
     {
