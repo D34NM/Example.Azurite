@@ -1,6 +1,6 @@
 # An example of using Azurite for testing
 
-This is an simple example of how to setup the Azurite together with Docker to enable testing without provisioning Azure resources. For now it only works with simple `Blob` storage, an idea would be to extend this to demonstrate all the feature Azurite provides.
+This is a simple example of how to setup the Azurite together with Docker to enable testing without provisioning Azure resources. For now it only works with simple `Blob` storage, an idea would be to extend this to demonstrate all the feature Azurite provides.
 
 ## Dependencies
 
